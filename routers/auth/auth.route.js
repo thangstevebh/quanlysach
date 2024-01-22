@@ -1,6 +1,4 @@
-const express = require("express");
-
-module.exports = async (router) => {
+export default async (router) => {
   //prefix
   router.use("/auth/", router);
 

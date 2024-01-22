@@ -1,12 +1,10 @@
-const express = require("express");
-
-const {
+import {
   getUserController,
   createUserController,
   getUserByIdController,
-} = require("../../controllers/user/user.controller");
+} from "../../controllers/user/user.controller.js";
 
-module.exports = async (router) => {
+export default async (router) => {
   //prefix
   router.use("/user/", router);
 

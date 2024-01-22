@@ -1,10 +1,10 @@
-const express = require("express");
-const dotenv = require("dotenv");
+import express from "express";
+import dotenv from "dotenv";
 
 dotenv.config();
 
-const connectDatabase = require("./lib/database");
-const routers = require("./routers/index.route");
+import { connectDatabase } from "./lib/database.js";
+import routers from "./routers/index.route.js";
 
 const app = express();
 

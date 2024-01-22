@@ -1,11 +1,10 @@
-const express = require("express");
+import express from "express";
+import userRoute from "./user/user.route.js";
+import authRoute from "./auth/auth.route.js";
 
 const router = express.Router();
 
-const userRoute = require("./user/user.route");
-const authRoute = require("./auth/auth.route");
-
-const routers = (app) => {
+export default async (app) => {
   app.get("/", (req, res) => {
     res.send("Hello Express, I'm");
   });
@@ -20,5 +19,3 @@ const routers = (app) => {
   //auth router
   authRoute(router);
 };
-
-module.exports = routers;

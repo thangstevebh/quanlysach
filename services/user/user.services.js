@@ -1,6 +1,6 @@
-const UserModel = require("../../models/user.model");
+import UserModel from "../../models/user.model.js";
 
-const createUser = async (payload) => {
+export const createUser = async (payload) => {
   const res = {
     statusCode: 201,
     message: "Create user successfully",
@@ -32,7 +32,7 @@ const createUser = async (payload) => {
   return res;
 };
 
-const getUserByIdSevice = async ({ userId }) => {
+export const getUserByIdSevice = async ({ userId }) => {
   const res = {
     statusCode: 201,
     message: "Get user successfully",
@@ -50,9 +50,4 @@ const getUserByIdSevice = async ({ userId }) => {
   }
 
   return res;
-};
-
-module.exports = {
-  createUser,
-  getUserByIdSevice,
 };
