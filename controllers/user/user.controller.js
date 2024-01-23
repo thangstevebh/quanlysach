@@ -2,7 +2,6 @@ import {
   createUser,
   getUserByIdSevice,
 } from "../../services/user/user.services.js";
-
 export const getUserController = (req, res) => {
   return res.status(200).json({ user: "John Doe" });
 };
