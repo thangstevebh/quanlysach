@@ -2,6 +2,7 @@ import {
   createUser,
   getUserByIdSevice,
 } from "../../services/user/user.services.js";
+
 export const getUserController = (req, res) => {
   return res.status(200).json({ user: "John Doe" });
 };
@@ -27,3 +28,8 @@ export const getUserByIdController = async (req, res) => {
 
   return res.status(200).json(getUserByIdResponse);
 };
+
+export async function getProfileController(req, res) {
+  console.log(req?.user);
+  console.log(123);
+}

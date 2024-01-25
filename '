@@ -1,0 +1,11 @@
+export const checkRole = (role) => {
+  return (req, res, next) => {
+    try {
+      const user = req?.user;
+      console.log(user);
+      // next();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+};
